@@ -1,0 +1,155 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --accent-color: #0e5e6f;
+  --footer-bg: #f0f0f0;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #1eb980;
+  --footer-bg: #1e1e1e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  line-height: 1.6;
+  padding: 10px;
+}
+
+header {
+  background: linear-gradient(135deg, #0088ff, #00c2cb);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* Dark Mode Toggle Button */
+#toggleMode {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#toggleMode:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+body.dark-mode #toggleMode {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Image Section */
+.image-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Styling */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.content h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.content h3 {
+  margin-top: 1.5rem;
+  color: var(--accent-color);
+}
+
+ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  list-style-type: disc;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.credit {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .content {
+    padding: 0.5rem;
+  }
+
+  #toggleMode {
+    top: 10px;
+    right: 10px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    gap: 5px;
+  }
+}
